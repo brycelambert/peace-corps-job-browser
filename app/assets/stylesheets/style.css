@@ -4,7 +4,7 @@
 }
 
 #header {
-	background: #fff url('pc-logo.jpg') no-repeat left top;
+	background: #fff url(image_path('pc-logo.jpg') no-repeat left top;
 	height: 120px;
 }
 
