@@ -8,12 +8,22 @@ var listOpportunities = function(results) {
 	}
 };
 
+var readCheckboxes = function(field) {
+	var ouputArrayForField = [];
+	var selectorString = "#filter-form-" + field + " input:checked";
+	$(selectorString).each(function() {
+		ouputArrayForField.push($(this).val());
+	});
+	return ouputArrayForField;
+};
+
 $(document).ready(function(){
 	$('#fitler-form-submit').click(function(e) {
 		e.preventDefault();
-
 		var data = {
-			countries: $("#country option:selected").text()
+			countries: $("#filter-form-country option:selected").text(),
+			sectors: readCheckboxes('sector'),
+			quarters: readCheckboxes('quarter')
 		};
 
 		$.ajax({
