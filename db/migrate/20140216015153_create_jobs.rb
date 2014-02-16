@@ -12,7 +12,7 @@ class CreateJobs < ActiveRecord::Migration
       t.string :project_title
       t.text :project_description
       t.string :language
-      t.date :nominate_deadline
+      t.date :nomination_deadline
       t.date :invitation_deadline
       t.date :staging_date
       t.text :conditions
