@@ -19,8 +19,6 @@ development:
   encoding: unicode
   database: peace-corps-job-browser_development
   pool: 5
-  username: peace-corps-job-browser
-  password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -48,13 +46,9 @@ test:
   encoding: unicode
   database: peace-corps-job-browser_test
   pool: 5
-  username: peace-corps-job-browser
-  password:
 
 production:
   adapter: postgresql
   encoding: unicode
   database: peace-corps-job-browser_production
   pool: 5
-  username: peace-corps-job-browser
-  password:
