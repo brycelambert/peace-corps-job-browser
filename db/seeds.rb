@@ -2,7 +2,7 @@ require 'csv'
 
 file = Rails.root + "import.csv"
 
-CSV.foreach(file, headers: true) do |row|
+CSV.foreach(file, headers: true, encoding: 'windows-1251:utf-8') do |row|
   Job.create(
     req_status: row['CURRENT REQ STATUS'] == 'Open',
     fy: row['FY'].to_i,
