@@ -45,10 +45,6 @@ li.job-box {
 	font-weight: bold;
 }
 
-.job-box .text-left {
-	text-align: left;
-}
-
 .job-box .text-right {
 	text-align: right;
 }
@@ -63,6 +59,13 @@ li.job-box {
 	width: 200px;
 	height: 200px;
 	display: inline-block;
+
+}
+
+.job-box .btn {
+	float: right;
+	margin-right: 20px;
+	margin-top: 10px;
 }
 
 #filter-form-sector, #filter-form-quarter {

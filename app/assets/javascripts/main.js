@@ -87,19 +87,26 @@ var writeJobs = function(job) {
 		}
 	}
 	return "<li class='job-box'>" +
-					"<div class='job-img-box'><img src='" + job.image_url +
-					"' /></div>" +
-					"<p class='text-left'>Project Title: " +
-					job.project_title + "<br />" +
-					"Country: " +
-					job.country + "</p>" +
-					"<p class='text-right'>Sector: " +
-					job.sector + "<br />" +
-					"Quarter: " +
-					job.quarter + "</p></div>" +
-					"<p class='job-description'>" + jobDescription + "</p>" +
-					"<p><a href='/show/" + job.id + "'>More Info</a>" +
-					"</li>";
+						"<div class='row'>" +
+							"<div class='job-img-box col-md-3'>" +
+								"<img src='" + job.image_url +	"' />" +
+							"</div>" +
+							"<div class='col-md-9'>" +
+								"<div class='row'>" +
+									"<p class='text-left col-md-7'>Project Title: " +
+										job.project_title + "<br />" +
+										"Country: " + job.country +
+									"</p>" +
+									"<p class='text-right col-md-5'>Sector: " +
+										job.sector + "<br />" +
+										"Quarter: " + job.quarter +
+									"</p>" +
+								"</div>" +
+								"<p class='job-description'>" + jobDescription + "</p>" +
+							"</div>" +
+							"<a href='/show/" + job.id + "' class='btn btn-primary'>More Info</a>" +
+						"</div>" +
+				"</li>";
 };
 
 var listJobs = function(results) {
