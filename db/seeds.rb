@@ -8,7 +8,7 @@ CSV.foreach(file, headers: true, encoding: 'windows-1251:utf-8') do |row|
   invitation_deadline = Date.strptime(row['INVITATION DEADLINE'], "%d-%b-%Y") unless row['INVITATION DEADLINE'].nil?
   staging_date = Date.strptime(row['STAGING DATE'], "%d-%b-%Y") unless row['STAGING DATE'].nil?
 
-  unless Job.last.nil?
+  unless Job.last.nil? || row['PROJECT TITLE'] == ''
     if row['PROJECT TITLE'] == Job.last.project_title
       increase = row['vol_requested'].to_i
       Job.last.vol_requested += increase

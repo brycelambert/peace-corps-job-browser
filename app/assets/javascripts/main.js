@@ -87,14 +87,15 @@ var writeJobs = function(job) {
 		}
 	}
 	return "<li class='job-box'>" +
-					"<p class='text-left'>Project Title: " +
-					job.project_title + "</p>" +
-					"<p class='text-left'>Country: " +
+					"<div class='row'>" +
+					"<p class='text-left col-md-8'>Project Title: " +
+					job.project_title + "<br />" +
+					"Country: " +
 					job.country + "</p>" +
-					"<p class='text-right'>Sector: " +
-					job.sector + "</p>" +
-					"<p class='text-right'>Quarter: " +
-					job.quarter + "</p>" +
+					"<p class='text-right col-md-4'>Sector: " +
+					job.sector + "<br />" +
+					"Quarter: " +
+					job.quarter + "</p></div>" +
 					"<p class='job-description'>" + jobDescription + "</p>" +
 					"</li>";
 };
