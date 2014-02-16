@@ -4,7 +4,7 @@
 }
 
 #header {
-	background: #fff url('pc-logo.jpg') no-repeat left top;
+	background: #fff url(image_path('pc-logo.jpg')) no-repeat left top;
 	height: 120px;
 }
 
@@ -58,4 +58,8 @@ li.job-box {
 .job-box .job-description {
 	border: 1px solid #f0f0f0;
 	padding: 5px;
+}
+
+#filter-form-sector, #filter-form-quarter {
+	font-weight: bold;
 }
