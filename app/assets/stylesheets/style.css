@@ -1,0 +1,19 @@
+body {
+	margin: 0 auto;
+	width: 800px;
+}
+
+#header {
+	background: #fff url('pc-logo.jpg') no-repeat left top;
+	height: 120px;
+}
+
+#header h1 {
+	text-align: right;
+	font-family: 'Helvetica';
+	color: #9db161;
+}
+
+.spacer {
+	height: 30px;
+}

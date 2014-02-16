@@ -6,7 +6,7 @@ class JobsController < ApplicationController
 
   def list
     conditions = {}
-    conditions[:country] = params[:countries] unless params[:countries].nil
+    conditions[:country] = params[:countries] unless params[:countries].nil?
     conditions[:sector] = params[:sectors] unless params[:sectors].nil?
     conditions[:quarter] = params[:quarters].map { |value| value.to_i } unless params[:quarters].nil?
 
