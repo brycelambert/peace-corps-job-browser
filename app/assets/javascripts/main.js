@@ -87,12 +87,13 @@ var writeJobs = function(job) {
 		}
 	}
 	return "<li class='job-box'>" +
-					"<div class='row'>" +
-					"<p class='text-left col-md-8'>Project Title: " +
+					"<div class='job-img-box'><img src='" + job.image_url +
+					"' /></div>" +
+					"<p class='text-left'>Project Title: " +
 					job.project_title + "<br />" +
 					"Country: " +
 					job.country + "</p>" +
-					"<p class='text-right col-md-4'>Sector: " +
+					"<p class='text-right'>Sector: " +
 					job.sector + "<br />" +
 					"Quarter: " +
 					job.quarter + "</p></div>" +

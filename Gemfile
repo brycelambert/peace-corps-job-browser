@@ -33,6 +33,7 @@ group :doc do
 end
 
 gem 'pry-rails'
+gem 'flickr-objects'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

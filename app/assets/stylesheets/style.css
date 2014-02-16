@@ -58,6 +58,13 @@ li.job-box {
 	padding: 5px;
 }
 
+.job-img-box {
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+}
+
 #filter-form-sector, #filter-form-quarter {
 	font-weight: bold;
 }
@@ -67,4 +74,8 @@ li.job-box {
 	width: 200px;
 	margin: 30px auto;
 	display: block;
+}
+
+#results ul {
+	padding-left: 0px;
 }
