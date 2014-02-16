@@ -1,2 +1,2 @@
-class Job < ActiveRecod::Base
+class Job < ActiveRecord::Base
 end
