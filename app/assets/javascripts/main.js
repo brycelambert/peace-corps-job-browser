@@ -97,6 +97,7 @@ var writeJobs = function(job) {
 					"Quarter: " +
 					job.quarter + "</p></div>" +
 					"<p class='job-description'>" + jobDescription + "</p>" +
+					"<p><a href='/show/" + job.id + "'>More Info</a>" +
 					"</li>";
 };
 

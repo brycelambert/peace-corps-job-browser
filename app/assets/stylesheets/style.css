@@ -61,3 +61,10 @@ li.job-box {
 #filter-form-sector, #filter-form-quarter {
 	font-weight: bold;
 }
+
+#apply-button {
+	font-size: 20px;
+	width: 200px;
+	margin: 30px auto;
+	display: block;
+}
