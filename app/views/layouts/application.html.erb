@@ -4,18 +4,19 @@
   <title>PeaceCorpsJobBrowser</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div id='header'>
-		<h1>Peace Corps Opportunity Search</h1>
-	</div>
-	<div class='spacer'>
-		&nbsp
-	</div>
-	<div id='search'>
+	<div class='container-fluid'>
+		<div id='header'>
+			<h1>Peace Corps Opportunity Search</h1>
+		</div>
+		<div class='spacer'>
+			&nbsp
+		</div>
 		<%= yield %>
 	</div>
-
 </body>
 </html>

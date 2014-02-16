@@ -1,6 +1,6 @@
-body {
+.container-fluid {
 	margin: 0 auto;
-	width: 800px;
+	max-width: 900px;
 }
 
 #header {
@@ -11,9 +11,25 @@ body {
 #header h1 {
 	text-align: right;
 	font-family: 'Helvetica';
-	color: #9db161;
+	color: #454545;
 }
 
 .spacer {
 	height: 30px;
+}
+
+#filter-div {
+	border: 1px solid #d2d2d2;
+	padding: 10px;
+}
+
+#fitler-form-submit {
+	margin-right: 15px;
+	margin-top: 100px;
+	width: 120px;
+	font-size: 1.3em;
+}
+
+.dropdown-checkbox ul.dropdown-checkbox-menu {
+	max-height: 350px;
 }
