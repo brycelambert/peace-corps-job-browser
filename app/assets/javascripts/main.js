@@ -62,16 +62,6 @@ var countries = [
 		{ id: '61', label: 'Zambia' }
 ];
 
-var listOpportunities = function(results) {
-	$('#results').html('');
-	for(var i=0; i < results.length; i++) {
-		$('#results').append(
-			"<h3>" + results[i].project_title + "</h3>" +
-			results[i].fy + "   " + "quarter: " + results[i].quarter
-		);
-	}
-};
-
 var readCheckboxes = function(field) {
 	var ouputArrayForField = [];
 	var selectorString = "#filter-form-" + field + " input:checked";
@@ -90,13 +80,33 @@ var readCountries = function() {
 };
 
 var writeJobs = function(job) {
-	return "<p class='label'>Project Title: </span>" +
-					"<p class='job-info'>" + job.project_title +
-					"<p class='label'>Country: </span>" +
-					"<p class='job-info'>" + job.country +
-					"<p class='label'>Country: </span>" +
-					"<p class='job-info'>" + job.country +
+	var jobDescription = job.project_description;
+	if(jobDescription != null) {
+		if(jobDescription.length > 400) {
+			jobDescription = jobDescription.substring(0, 400) + "...";
+		}
+	}
+	return "<li class='job-box'>" +
+					"<p class='text-left'>Project Title: " +
+					job.project_title + "</p>" +
+					"<p class='text-left'>Country: " +
+					job.country + "</p>" +
+					"<p class='text-right'>Sector: " +
+					job.sector + "</p>" +
+					"<p class='text-right'>Quarter: " +
+					job.quarter + "</p>" +
+					"<p class='job-description'>" + jobDescription + "</p>" +
+					"</li>";
+};
 
+var listJobs = function(results) {
+	var $ul = $('<ul>');
+	$('#results').html('');
+	for(var i=0; i < results.length; i++) {
+		var jobInfo = writeJobs(results[i]);
+		$ul.append(jobInfo);
+	}
+	$ul.appendTo('#results');
 };
 
 $(document).ready(function(){
@@ -125,7 +135,7 @@ $(document).ready(function(){
 			type: 'GET',
 			success: function(data){
 				console.log(data);
-				listOpportunities(data);
+				listJobs(data);
 			}
 		});
 		return false;

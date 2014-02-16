@@ -33,3 +33,29 @@
 .dropdown-checkbox ul.dropdown-checkbox-menu {
 	max-height: 350px;
 }
+
+li.job-box {
+	display: block;
+	margin-top: 17px;
+	border: 1px solid #f0f0f0;
+	padding: 15px;
+}
+
+.job-box .text-left, .job-box .text-right {
+	width: 300px;
+	font-weight: bold;
+	margin: 0px;
+}
+
+.job-box .text-left {
+	text-align: left;
+}
+
+.job-box .text-right {
+	text-align: right;
+}
+
+.job-box .job-description {
+	border: 1px solid #f0f0f0;
+	padding: 5px;
+}
